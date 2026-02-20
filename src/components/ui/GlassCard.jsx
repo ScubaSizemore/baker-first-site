@@ -12,7 +12,7 @@ export default function GlassCard({
         hover
           ? 'hover:shadow-card-hover hover:border-border-hover transition-all duration-300'
           : ''
-      } ${padding ? 'p-6' : ''} ${className}`}
+      } ${padding ? 'p-4 sm:p-6' : ''} ${className}`}
       {...props}
     >
       {children}

@@ -40,7 +40,7 @@ export default function Services() {
                         {service.tagline}
                       </span>
                     </div>
-                    <h2 className="font-display text-3xl sm:text-4xl mb-4 text-brand-charcoal">
+                    <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl mb-4 text-brand-charcoal">
                       {service.title}
                     </h2>
                     <p className="text-text-secondary leading-relaxed mb-6">
@@ -67,7 +67,7 @@ export default function Services() {
 
                   <div className={!isEven ? 'lg:order-1' : ''}>
                     <GlassCard hover={false}>
-                      <div className="grid grid-cols-3 gap-4">
+                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                         {service.stats.map((stat) => (
                           <div key={stat.label} className="text-center">
                             <div className="font-data text-2xl font-bold text-brand-red">

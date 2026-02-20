@@ -18,7 +18,7 @@ export default function FeaturedProperty() {
         <ScrollReveal className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
           <div>
             <Badge className="mb-4">Featured Listings</Badge>
-            <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl text-brand-charcoal">
+            <h2 className="font-display text-2xl sm:text-4xl lg:text-5xl text-brand-charcoal">
               Available <span className="text-brand-red">Properties</span>
             </h2>
           </div>

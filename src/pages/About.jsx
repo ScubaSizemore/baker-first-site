@@ -53,7 +53,7 @@ export default function About() {
       {/* Story */}
       <section className="section-padding">
         <div className="container-max mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             <ScrollReveal>
               <div className="rounded-2xl border border-border-subtle overflow-hidden bg-bg-surface">
                 <img src="/assets/legacy-leadership.png" alt="Baker First Legacy of Leadership" className="w-full h-auto object-contain" />

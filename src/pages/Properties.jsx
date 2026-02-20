@@ -51,7 +51,7 @@ export default function Properties() {
                 className="w-full bg-bg-surface border border-border-subtle rounded-lg pl-10 pr-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:border-brand-red/30 focus:ring-1 focus:ring-brand-red/20 transition-colors"
               />
             </div>
-            <div className="flex gap-2 flex-wrap">
+            <div className="flex flex-col sm:flex-row gap-2 flex-wrap">
               {propertyTypes.map((type) => (
                 <button
                   key={type}

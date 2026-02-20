@@ -23,7 +23,7 @@ function LogoTile({ client }) {
           loading="lazy"
         />
       </div>
-      <p className="text-text-muted text-[10px] font-heading font-medium text-center mt-2 whitespace-nowrap group-hover:text-text-secondary transition-colors">
+      <p className="text-text-muted text-[11px] font-heading font-medium text-center mt-2 whitespace-nowrap group-hover:text-text-secondary transition-colors">
         {client.name}
       </p>
     </div>

@@ -24,7 +24,7 @@ export default function ServicesGrid() {
       <div className="container-max mx-auto">
         <ScrollReveal className="text-center mb-16">
           <Badge className="mb-4">What We Do</Badge>
-          <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl mb-4 text-brand-charcoal">
+          <h2 className="font-display text-2xl sm:text-4xl lg:text-5xl mb-4 text-brand-charcoal">
             Full-Lifecycle{' '}
             <span className="text-brand-red">Commercial Real Estate</span>
           </h2>

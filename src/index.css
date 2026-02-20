@@ -85,9 +85,19 @@
 
 /* Hero section — short on mobile, tall on desktop */
 .hero-section {
-  min-height: 75vh;
+  min-height: 70vh;
 }
 @media (min-width: 640px) {
+  .hero-section {
+    min-height: 100vh;
+  }
+}
+@media (min-width: 768px) {
+  .hero-section {
+    min-height: 100vh;
+  }
+}
+@media (min-width: 1024px) {
   .hero-section {
     min-height: 120vh;
   }

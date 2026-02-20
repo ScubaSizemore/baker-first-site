@@ -16,7 +16,7 @@ export default function Footer() {
       <div className="h-1 bg-brand-red" />
 
       <div className="container-max mx-auto section-padding">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-8">
           {/* Brand column */}
           <div>
             <Link to="/" className="inline-block mb-4">

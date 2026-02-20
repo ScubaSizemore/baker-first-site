@@ -7,13 +7,13 @@ export default function CTABanner() {
     <section className="section-padding bg-bg-surface">
       <div className="container-max mx-auto">
         <ScrollReveal>
-          <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl bg-white border border-border-subtle shadow-card p-5 sm:p-12 lg:p-16">
+          <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl bg-white border border-border-subtle shadow-card py-8 px-5 sm:p-12 lg:p-16">
             {/* Decorative glow */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-brand-red/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
 
             <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
               <div className="text-center lg:text-left">
-                <h2 className="font-display text-2xl sm:text-4xl lg:text-5xl mb-3 text-brand-charcoal">
+                <h2 className="font-display text-xl sm:text-3xl lg:text-4xl mb-3 text-brand-charcoal">
                   Ready to Make Your{' '}
                   <span className="text-brand-red">Next Move?</span>
                 </h2>
