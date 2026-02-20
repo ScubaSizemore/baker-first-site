@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased;
+    background-color: #FFFFFF;
+    color: #2B2B2B;
+    font-family: 'Manrope', system-ui, sans-serif;
+    margin: 0;
+  }
+}
+
+@layer components {
+  /* Glass — light theme (white card with blur + shadow) */
+  .glass {
+    @apply bg-white/80;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  }
+  .glass-hover {
+    @apply transition-all duration-300;
+  }
+  .glass-hover:hover {
+    border-color: rgba(0,0,0,0.12);
+  }
+  .glass-hover:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08), 0 4px 10px rgba(0,0,0,0.04);
+  }
+
+  /* Glass — dark sections */
+  .glass-dark {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Accent text = brand red */
+  .gradient-text {
+    color: #C8382D;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300;
+    background-color: #C8382D;
+    font-family: 'General Sans', system-ui, sans-serif;
+  }
+  .btn-primary:hover {
+    background-color: #B0312A;
+    box-shadow: 0 0 20px rgba(200,56,45,0.25);
+  }
+  .btn-glass {
+    @apply bg-white/80 font-semibold px-6 py-3 rounded-lg transition-all duration-300;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(0,0,0,0.08);
+    font-family: 'General Sans', system-ui, sans-serif;
+  }
+  .btn-glass:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08), 0 4px 10px rgba(0,0,0,0.04);
+  }
+
+  /* Badge (light red pill) */
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold;
+    font-family: 'General Sans', system-ui, sans-serif;
+    background-color: #FDF2F1;
+    color: #C8382D;
+    border: 1px solid rgba(200,56,45,0.15);
+  }
+
+  /* Layout */
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24;
+  }
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

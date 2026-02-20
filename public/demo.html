@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Baker First - Site Demo</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #EAEAEA; overflow: hidden; }
+  iframe { width: 100vw; height: 100vh; border: none; }
+</style>
+</head>
+<body>
+<iframe id="site" src="/"></iframe>
+<script>
+const PAGES = [
+  { path: '/', label: 'Home', scrollTime: 14000, pauseTop: 3000, pauseBottom: 2500 },
+  { path: '/about', label: 'About', scrollTime: 12000, pauseTop: 2500, pauseBottom: 2000 },
+  { path: '/services', label: 'Services', scrollTime: 10000, pauseTop: 2500, pauseBottom: 2000 },
+  { path: '/properties', label: 'Properties', scrollTime: 10000, pauseTop: 2500, pauseBottom: 2000 },
+  { path: '/quail-lakes', label: 'Quail Lakes', scrollTime: 12000, pauseTop: 2500, pauseBottom: 2000 },
+  { path: '/contact', label: 'Contact', scrollTime: 8000, pauseTop: 2500, pauseBottom: 3000 },
+];
+
+const iframe = document.getElementById('site');
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function smoothScroll(win, duration) {
+  return new Promise(resolve => {
+    const doc = win.document.documentElement;
+    const start = win.scrollY;
+    const end = doc.scrollHeight - win.innerHeight;
+    const dist = end - start;
+    if (dist <= 0) { resolve(); return; }
+
+    const t0 = performance.now();
+    function step(now) {
+      const elapsed = now - t0;
+      const progress = Math.min(elapsed / duration, 1);
+      // Very smooth ease-in-out
+      const ease = progress < 0.5
+        ? 4 * progress * progress * progress
+        : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+      win.scrollTo(0, start + dist * ease);
+      if (progress < 1) requestAnimationFrame(step);
+      else resolve();
+    }
+    requestAnimationFrame(step);
+  });
+}
+
+function navigateTo(path) {
+  return new Promise(resolve => {
+    iframe.onload = () => {
+      setTimeout(resolve, 800);
+    };
+    iframe.contentWindow.location.href = path;
+  });
+}
+
+async function runDemo() {
+  for (let i = 0; i < PAGES.length; i++) {
+    const page = PAGES[i];
+
+    await navigateTo(page.path);
+
+    // Let the page settle and animations play
+    await sleep(page.pauseTop);
+
+    // Slow cinematic scroll
+    await smoothScroll(iframe.contentWindow, page.scrollTime);
+
+    // Pause at bottom
+    await sleep(page.pauseBottom);
+  }
+
+  // Loop back to home at the end
+  await navigateTo('/');
+}
+
+// Start after iframe loads
+iframe.onload = function() {
+  iframe.onload = null;
+  setTimeout(runDemo, 2000);
+};
+</script>
+</body>
+</html>
