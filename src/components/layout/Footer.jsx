@@ -19,13 +19,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8">
           {/* Brand column */}
           <div>
-            <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-full bg-brand-red flex items-center justify-center font-heading font-bold text-white text-sm">
-                B
-              </div>
-              <span className="font-heading font-bold text-lg text-brand-charcoal">
-                Baker<span className="text-brand-red">First</span>
-              </span>
+            <Link to="/" className="inline-block mb-4">
+              <img
+                src="/assets/baker-first-logo.png"
+                alt="Baker First Commercial Real Estate"
+                className="h-10 w-auto"
+              />
             </Link>
             <p className="text-text-secondary text-sm leading-relaxed mb-6">
               Oklahoma&apos;s premier full-lifecycle commercial real estate

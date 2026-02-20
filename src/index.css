@@ -83,6 +83,16 @@
   }
 }
 
+/* Hero section — short on mobile, tall on desktop */
+.hero-section {
+  min-height: 75vh;
+}
+@media (min-width: 640px) {
+  .hero-section {
+    min-height: 120vh;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;

@@ -4,23 +4,23 @@ import StatCounter from '../../ui/StatCounter';
 
 export default function Hero() {
   return (
-    <section className="relative flex flex-col bg-[#EAEAEA] overflow-hidden min-h-screen sm:min-h-screen" style={{ minHeight: '120vh' }}>
+    <section className="relative flex flex-col bg-[#EAEAEA] overflow-hidden hero-section">
       {/* Video background */}
       <video
         autoPlay
         muted
         loop
         playsInline
-        className="absolute inset-x-0 -top-10 bottom-12 sm:bottom-24 w-full object-contain"
+        className="absolute inset-x-0 top-16 sm:-top-10 bottom-0 sm:bottom-24 w-full object-contain"
       >
         <source src="/assets/hero-video.mp4" type="video/mp4" />
       </video>
 
       {/* Subtle bottom gradient for readability over buttons */}
-      <div className="absolute bottom-0 left-0 right-0 h-40 sm:h-64 bg-gradient-to-t from-white/80 to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 left-0 right-0 h-28 sm:h-64 bg-gradient-to-t from-white/80 to-transparent pointer-events-none" />
 
       {/* CTA buttons */}
-      <div className="absolute left-4 sm:left-28 lg:left-40 bottom-[8%] sm:bottom-[40%] z-10">
+      <div className="absolute left-4 sm:left-28 lg:left-40 bottom-[4%] sm:bottom-[40%] z-10">
         <div className="flex flex-col gap-3 opacity-0 animate-fade-in-up [animation-delay:600ms]">
           <Button to="/properties" size="lg">
             Explore Our Properties

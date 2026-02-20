@@ -45,13 +45,12 @@ export default function Navbar() {
       <nav className="container-max mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 shrink-0">
-            <div className="w-8 h-8 rounded-full bg-brand-red flex items-center justify-center font-heading font-bold text-white text-sm">
-              B
-            </div>
-            <span className="font-heading font-bold text-lg text-brand-charcoal">
-              Baker<span className="text-brand-red">First</span>
-            </span>
+          <Link to="/" className="shrink-0">
+            <img
+              src="/assets/baker-first-logo.png"
+              alt="Baker First Commercial Real Estate"
+              className="h-10 sm:h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop nav */}
