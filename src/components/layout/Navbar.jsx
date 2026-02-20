@@ -36,9 +36,10 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      style={{ zIndex: 9999, WebkitTransform: 'translateZ(0)' }}
+      className={`fixed top-0 left-0 right-0 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/95 backdrop-blur-glass border-b border-border-subtle shadow-card'
+          ? 'bg-white border-b border-border-subtle shadow-sm'
           : 'bg-white border-b border-border-subtle'
       }`}
     >
