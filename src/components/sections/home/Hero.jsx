@@ -20,7 +20,7 @@ export default function Hero() {
       <div className="absolute bottom-0 left-0 right-0 h-28 sm:h-64 bg-gradient-to-t from-white/80 to-transparent pointer-events-none" />
 
       {/* CTA buttons */}
-      <div className="absolute left-4 sm:left-28 lg:left-40 bottom-[4%] sm:bottom-[40%] z-10">
+      <div className="absolute left-4 sm:left-28 lg:left-40 bottom-[18%] sm:bottom-[40%] z-10">
         <div className="flex flex-col gap-3 opacity-0 animate-fade-in-up [animation-delay:600ms]">
           <Button to="/properties" size="lg">
             Explore Our Properties
